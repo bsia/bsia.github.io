@@ -43,6 +43,19 @@ Looking at the adb log message, when clicking on the browser link, it does indic
 In fact, the Uri itself is embedded as part of the Intent's data:
 
         I/ActivityManager(   61): Starting: Intent { act=android.intent.action.VIEW cat=[android.intent.category.BROWSABLE] dat=intent:#Intent;action=com.myexample.action.CUSTOM_VIEW;end (has extras) } from pid 384
+        
+        
+In any case, I did find a workaround (other than resorting to an http or a frowned-upon custom scheme).  If I add a specially crafted intent-filter, this seems to work:
+
+	<intent-filter>
+		<action name="android.intent.action.VIEW" />
+		<category name="android.intent.category.BROWSABLE" />
+		<data scheme="intent" />
+	</intent-filter>
+	
+I know, it looks like a workaround.  And it probably is.  The reason this seems to be ok is because the full intent uri is added as the data part of the intent.  (I still can't figure out how the android browser parses the intent uris.)
+
+The only problem with this approach is that you can only use ACTION_VIEW with it; you can't use a custom action.  However, since you can specify the package name in the uri anyway, maybe you don't need a specific action in the first place.  Another option is to use the uri data path as some kind of filter.  I haven't really tried this out but it may work…
 
 Some other references regarding intent uris:
 
