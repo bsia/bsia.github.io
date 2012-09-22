@@ -5,7 +5,7 @@ tagline: code wanderer
 ---
 {% include JB/setup %}
 
-## My Posts
+## Blog Posts
 
 <ul class="posts">
   {% for post in site.posts %}
