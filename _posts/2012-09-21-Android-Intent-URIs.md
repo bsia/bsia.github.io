@@ -30,8 +30,10 @@ This provides a nice clean way of launching an app from the command line via adb
 
 Even programmatically, this could be an alternative way of creating an intent:
 
+{% highlight java %}
         Intent intent = Intent.parseUri("intent:#Intent;com.myexample.action.CUSTOM_VIEW;end");
         startActivity(intent);
+{% endhighlight %}
 
 Unfortunately, I could never get it to work from the browser.
 The same uri embedded in an html page results in a web page not found error:
