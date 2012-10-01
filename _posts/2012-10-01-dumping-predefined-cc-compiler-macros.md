@@ -15,3 +15,4 @@ In this case, I needed to detect if my code was being compiled by the clang comp
 
 Specifically, I was looking for `__clang__`.
 
+Btw, it also works for gcc.
