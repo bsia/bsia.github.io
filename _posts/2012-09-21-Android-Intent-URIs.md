@@ -14,7 +14,7 @@ For future reference, here is the format:
 
 intent URI = "intent:#Intent;" config_data  ";end"
 
-config_data = *( kv_pair / "SEL" )
+config_data = \*( kv_pair / "SEL" )
 kv_pair = key "=" value
 
 key = action / category / type / launchFlags / package / component / scheme / sourceBounds
