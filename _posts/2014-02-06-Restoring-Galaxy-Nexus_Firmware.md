@@ -16,6 +16,10 @@ I just followed "Scenario 2".
 
 That page goes on to reference his original source which is from xda forums: [\[HOW-TO\] How to flash a factory image / return to stock / unlock / root #](http://forum.xda-developers.com/showpost.php?p=34552123&postcount=1)
 
+I used the [4.3 JB takju image from google](https://developers.google.com/android/nexus/images#takjujwr66y).
+Takju refers to the specific Galaxy Nexus device type if you bought your phone from Google Play.
+
+
 Note to self: 'adb reboot bootloader' is required before you can use fastboot on the device.
 
 
