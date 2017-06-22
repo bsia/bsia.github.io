@@ -5,5 +5,4 @@
 layout: home
 ---
 
-Hello again, world!
 
