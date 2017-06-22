@@ -127,3 +127,5 @@ JB :
 
 markdown: kramdown
 
+
+theme: jekyll-theme-merlot
