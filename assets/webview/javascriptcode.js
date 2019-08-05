@@ -15,7 +15,7 @@ button.innerHTML = "Send to Mobile";
 button.style.width = "150px";
 button.style.height = "30px";
 button.addEventListener ("click", function() {
-  window.mobileObj.textToMobile(input.value);
+  window.mobileObj.onClicked(input.value);
 });
 buttonContainer.appendChild(button);
 
